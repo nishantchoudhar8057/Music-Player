@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <title>MusicPlayer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="heading">
+    <h1>Music Player</h1> 
+    <button>Toggle Theme</button>
+    </div>
+     
+
+    <div class="container">
+        <div class="all-songs">
+            <h2>All Songs</h2>
+            <select onchange="showSongs()">
+            <option value="all">All Generes</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="hiphop">Hip Hop</option>
+            </select>
+
+            <input type="text" oninput="searchSongs(this.value)" placeholder="Search...">
+            <ul id="song-list">
+        
+            </ul>
+
+
+        </div>
+        <div class="card-class">
+            <h2>Song Card</h2>
+            <div id="song-card">
+
+            </div>
+            <audio controls id="audio-player">
+                <!-- Audio source will be dynamically added here -->
+              </audio>
+            <button onclick="playPrevious()">Previous</button>
+            <button onclick="playNext()">Next</button>
+            <button onclick="addToPlalist()">Add to Playlist</button>
+        </div>
+
+        <div class="playlist-div">
+            <h2>Playlist</h2>
+            <button onclick="createPlaylist()">Create Playlist</button>
+            <input type="text" oninput="searchPlaylist(this.value)" placeholder="Search...">
+            <ul id="playlist-list">
+              <!-- Playlists will be dynamically added here -->
+            </ul>
+          </div>
+          
+    </div>
+<script src="musicplayer.js"></script>
+       
+</body>
+</html>
